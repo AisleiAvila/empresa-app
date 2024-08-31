@@ -1,0 +1,23 @@
+<!-- src/app/unidades-federativas/unidades-federativas.component.html -->
+<div *ngIf="unidadesFederativas.length > 0; else loading">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Sigla</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let uf of unidades-federativas">
+          <td>{{ uf.id }}</td>
+          <td>{{ uf.nome }}</td>
+          <td>{{ uf.sigla }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #loading>
+    <p>Carregando dados...</p>
+  </ng-template>
+  
